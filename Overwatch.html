@@ -3,6 +3,18 @@
  <head>
 	  <meta charset="UTF-8">
 	  <title>Overwatch_Ana</title>
+	  <style>
+	  	.js{
+	  		font-weight: bold;
+	  		color: red;
+	  		}
+	  	#first{
+	  		color:green;
+	  		}
+	  	span{
+	  		color:blue;
+	  		}
+	  </style>
  </head>
  <body>
  	<h1><a href="Overwatch.html">Overwatch</a></h1>
@@ -10,13 +22,49 @@
 		<li><a href="Ana.html">Ana</a></li>
 		<li><a href="Roadhog.html">Roadhog</a></li>
 		<li><a href="Lucio.html">Lucio</a></li>
+		<li><a href="Dynamic.html">Dynamic</a></li>
 	</ol>
+		일반 키 
+		<input type="button" value="낮" onclick="
+			document.querySelector('body').style.backgroundColor='black';
+			document.querySelector('body').style.color='white';
+			">
+		<input type="button" value="밤" onclick="
+			document.querySelector('body').style.backgroundColor='white';
+			document.querySelector('body').style.color='black';
+			">
+			<br><br> 토글 키 
+		<input id="night_day" type="button" value="낮" onclick="
+			if(document.querySelector('#night_day').value === '밤' ){
+				document.querySelector('body').style.backgroundColor='white';
+				document.querySelector('body').style.color='black';
+				document.querySelector('#night_day').value = '낮';
+			} else {
+				document.querySelector('body').style.backgroundColor='black';
+				document.querySelector('body').style.color='white';
+				document.querySelector('#night_day').value = '밤';
+			}
+		">
+		<br><br>간결한 코드 버젼 
+		<input type="button" value="낮" onclick="
+			var this_body = document.querySelector('body')
+			if(this.value === '밤' ){
+				this_body.style.backgroundColor='white';
+				this_body.style.color='black';
+				this.value = '낮';
+			} else {
+				this_body.style.backgroundColor='black';
+				this_body.style.color='white';
+				this.value = '밤';
+			}
+		">		
 	<h2><a href="https://playoverwatch.com/ko-kr/" title="오버워치 공식 페이지로 이동합니다.">오버워치</a></h2>
-	  <img src="./Overwatch.jpeg" width="50%">
+	  <img src="../img/Overwatch.jpeg" width="50%">
 	  <h4>"블리자드 엔터테인먼트의 팀 기반 멀티플레이 하이퍼 FPS게임이다.</h4>
 	  <p>2016년 05월 24일에 PC, PS4, XBOX ONE으로 전 세계 동시 발매되었다. 
 	  기존 블리자드를 대표하는 세 개의 IP였던 워크래프트 시리즈, 
-	  디아블로 시리즈, 스타크래프트 시리즈와는 별개인 네 번째 IP이다.
+	  디아블로 시리즈, 스타크래프트 시리즈와는 별개인 
+	  	<span id='first' class='js'>네 번째 IP</span>이다.
 	  먼 미래나 판타지 세계관을 배경으로 하던 다른 시리즈들과는 달리, 
 	  대체로 실제 지구상에 존재하는 국가들을 기반으로 하는 근미래를 배경으로 한다. 
 	  게다가 작중에서 하스스톤 개그와 레이너 특공대 마크, 멀록 깁스 등이 이스터 
